@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma Product Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        body.modal-open {
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Section */
+        .hero {
+            background-color: #222B32;
+            color: white;
+            height: 1042px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .nav-logo img {
+            height: 58px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 21px;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            line-height: 28px;
+            padding: 10px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 24px;
+        }
+
+        .social-icon {
+            width: 40.99px;
+            height: 40.99px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            max-width: 819px;
+            margin: 0 auto;
+            padding: 80px 0;
+        }
+
+        .hero-content h1 {
+            font-size: 74px;
+            font-weight: 700;
+            line-height: 84px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 28px;
+            line-height: 40px;
+            margin-bottom: 40px;
+        }
+
+        .cta-button {
+            background-color: #2091F9;
+            color: white;
+            border: none;
+            padding: 16px 0;
+            width: 236px;
+            border-radius: 35px;
+            font-size: 20px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 55px;
+            margin-bottom: 7px;
+        }
+
+        .section-subtitle {
+            font-size: 28px;
+            line-height: 40px;
+            color: #374754;
+            max-width: 550px;
+            margin: 0 auto 80px;
+        }
+
+        .features-grid {
+            display: flex;
+            justify-content: center;
+            gap: 52px;
+            margin-bottom: 80px;
+        }
+
+        .feature-card {
+            width: 255px;
+            text-align: center;
+        }
+
+        .feature-icon {
+            width: 61px;
+            height: 61px;
+            background-color: #2091F9;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 28px;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 18px;
+            line-height: 25px;
+            color: #374754;
+        }
+
+        /* Video Section */
+        .video-container {
+            width: 1177.34px;
+            height: 658.3px;
+            background-color: #000;
+            border-radius: 81.4769px;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70px;
+            height: 70px;
+            background-color: #2091F9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .play-button::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 25px solid white;
+            margin-left: 10px;
+        }
+/* Fastest Way Section */
+.fastest-way {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 226px 82px;
+    max-width: 1241px;
+    margin: 0 auto;
+}
+
+.fastest-way-content {
+    max-width: 530px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #2196f3;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 999px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    font-family: sans-serif;
+}
+
+.fastest-way h2 {
+    font-size: 48px;
+    line-height: 55px;
+    margin-bottom: 20px;
+    color: #1d2b44; /* Optional darker tone for match */
+}
+
+.fastest-way p {
+    font-size: 20px;
+    line-height: 32px;
+    color: #374754;
+    margin-bottom: 40px;
+}
+
+        
+/* Lightning Fast Section */
+.lightning-fast {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 80px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.newsletter-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.newsletter-content {
+    max-width: 480px;
+}
+
+.newsletter-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #374754;
+    margin-bottom: 10px;
+}
+
+.newsletter-content h2 {
+    font-size: 36px;
+    line-height: 44px;
+    color: #252B42;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.newsletter-content h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #252B42;
+    margin-bottom: 5px;
+}
+
+.newsletter-content p {
+    font-size: 14px;
+    color: #374754;
+    margin-bottom: 30px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.newsletter-form input {
+    width: 250px;
+    height: 50px;
+    background: #F4F4F4;
+    border: 1px solid #E8E8E8;
+    border-radius: 30px;
+    padding: 0 20px;
+    font-size: 14px;
+    outline: none;
+}
+
+.newsletter-form button {
+    background: #2091F9;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 700;
+    height: 50px;
+    cursor: pointer;
+}
+
+       /* Partners Section */
+.partners {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    color: #1d2b44;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    line-height: 28px;
+    color: #4a5a6a;
+    margin-bottom: 50px;
+}
+
+.partner-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+}
+
+.partner-card {
+    border: 1px solid #D8D8D8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 163px;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.partner-card h6 {
+    font-size: 14px;
+    color: #374754;
+    margin-bottom: 15px;
+}
+
+.partner-card img {
+    max-height: 60px;
+    object-fit: contain;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #2196f3;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 12px 32px;
+    border-radius: 999px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #1976d2;
+}
+
+        /* Testimonials Section */
+.testimonials {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.testimonial-slider {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.testimonial-slide {
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.testimonial-slide.active {
+    display: block;
+}
+
+.testimonial-content {
+    font-size: 28px;
+    line-height: 40px;
+    color: #374754;
+    margin-bottom: 30px;
+    font-style: italic;
+    padding: 0 10px;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+}
+
+.testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+}
+
+.author-info {
+    text-align: left;
+}
+
+.author-info h6 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.author-info p {
+    margin: 3px 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #0d00ff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #008cff;
+}
+
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .author-info h6 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #374754;
+        }
+
+        .author-info p {
+            font-size: 15px;
+            color: #252B42;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 13px;
+            margin-top: 21px;
+        }
+
+        .dot {
+            width: 23px;
+            height: 23px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #ffffff;
+            border: 1px solid #000000;
+        }
+
+        .dot:not(.active) {
+            border: 1px solid rgba(0, 0, 0, 0.5);
+        }
+
+/* Pricing Section */
+.pricing {
+    padding: 100px 0;
+    background-color: #252B42;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.section-title2 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 60px;
+}
+
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px 30px;
+    color: #252B42;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card.primary {
+    background-color: #2091F9;
+    color: white;
+    padding: 80px 30px;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.pricing-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.pricing-card h6 {
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.price {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 30px;
+}
+
+.price-symbol {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    align-self: flex-start;
+}
+
+.price-amount {
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.price-period {
+    font-size: 14px;
+    align-self: flex-end;
+    margin-bottom: 8px;
+}
+
+.pricing-features {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.pricing-feature {
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    color: inherit;
+}
+
+.pricing-button {
+    width: 100%;
+    height: 48px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+}
+
+.pricing-card .pricing-button {
+    background-color: #2091F9;
+    color: white;
+}
+
+.pricing-card.primary .pricing-button {
+    background-color: white;
+    color: #2091F9;
+}
+
+        /* Contact Section */
+        .section-title {
+        color: black;
+        }
+
+        .contact {
+            padding: 100px 0;
+            color: #000000;
+            text-align: center;
+        }
+
+        .contact-row {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 50px;
+            margin-left: 100px;
+        }
+
+        .contact-form {
+            width: 453px;
+            background-color: white;
+            border: 1px solid #DDDDDD;
+            box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+            border-radius: 20px;
+            padding: 52px 50px;
+            text-align: left;
+        }
+
+        .contact-form h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 45px;
+            text-align: center;
+        }
+
+        .form-input {
+            width: 353px;
+            height: 54px;
+            background-color: #F5F5F5;
+            border: 1px solid #E8E8E8;
+            border-radius: 39px;
+            padding: 19px 20px;
+            margin-bottom: 45px;
+        }
+
+        .form-textarea {
+            width: 353px;
+            height: 193px;
+            background-color: #F5F5F5;
+            border: 1px solid #E8E8E8;
+            border-radius: 10px;
+            padding: 23px 20px;
+            margin-bottom: 45px;
+            resize: none;
+        }
+
+.contact-info {
+    display: flex;
+    justify-content: center; /* better for even spacing */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    text-align: center;
+    gap: 30px; /* reduced from 30px */
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    gap: 10px; /* reduced from 10px */
+}
+
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #2091F9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-details {
+            font-size: 16px;
+            color: #374754;
+        }
+
+        .map-container {
+            width: 516px;
+            height: 323.19px;
+            background-color: #ddd;
+            border-radius: 48px;
+            overflow: hidden;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+.social-media {
+    display: flex;
+    gap: 24px;
+    margin-top: 50px;
+    justify-content: center; /* Optional: center icons */
+}
+
+.social-icon {
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(37%) sepia(87%) saturate(1499%) hue-rotate(182deg) brightness(95%) contrast(96%);
+}
+
+
+        /* Footer */
+        footer {
+            background-color: #252B42;
+            color: white;
+            padding: 150px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            gap: 125px;
+        }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .footer-column h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .footer-column a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            line-height: 28px;
+        }
+
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-block {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-icon {
+            width: 46px;
+            height: 46px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-text {
+            font-size: 15px;
+            line-height: 27px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 24px;
+            margin-top: 20px;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 1200px) {
+            .video-container {
+                width: 90%;
+                height: auto;
+                aspect-ratio: 16/9;
+            }
+            
+            .partner-card {
+                width: 220px;
+            }
+            
+            .pricing-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-row {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-form, .map-container {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 20px;
+            }
+            
+            .nav-logo {
+                position: static;
+                transform: none;
+                margin: 20px 0;
+            }
+            
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero-content h1 {
+                font-size: 48px;
+                line-height: 1.2;
+            }
+            
+            .hero-content p {
+                font-size: 20px;
+                line-height: 1.4;
+            }
+            
+            .features-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .partner-logos {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 50px;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+<section class="hero" style="background-image: url('assets/images/background1.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-color: #222B32; color: white; height: 1042px; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+    <nav class="navbar">
+        <div class="nav-menu">
+            <a href="#">Home</a>
+            <a href="#">Product</a>
+            <a href="#">Pricing</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="nav-logo">
+            <img src="assets/images/logo-light.png" alt="Logo">
+        </div>
+        <div class="social-icons">
+            <a href="#"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
+            <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+            <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+        </div>
+    </nav>
+    <div class="hero-content">
+        <h1>The best products start with Figma</h1>
+        <p>Most calendars are designed for teams. Slate is designed for freelancers</p>
+        <button class="cta-button">Try For Free</button>
+    </div>
+</section>
+
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2 class="section-title">Features</h2>
+        <p class="section-subtitle" style="color: black;">Most calendars are designed for teams. <br> Slate is designed for freelancers</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                    <a href="#"><img src="assets/icons/opent.png"></a>
+
+                <h3>OpenType features Variable fonts</h3>
+                <p>Slate helps you see how many more days you need to work to reach your financial goal.</p>
+            </div>
+            <div class="feature-card">
+                    <a href="#"><img src="assets/icons/design.png"></a>
+
+                <h3>Design with real data</h3>
+                <p>Slate helps you see how many more days you need to work to reach your financial goal.</p>
+            </div>
+            <div class="feature-card">
+                    <a href="#"><img src="assets/icons/fastest.png"></a>
+                <h3>Fastest way to take action</h3>
+                <p>Slate helps you see how many more days you need to work to reach your financial goal.</p>
+            </div>
+        </div>
+        
+        <div class="video-container">
+    <video id="demo-video" poster="/assets/images/video_thumbnail.png">
+        <source src="assets/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="play-button" id="play-button"></div>
+</div>
+
+    </section>
+    <!-- Fastest Way Section -->
+    <section class="fastest-way">
+        <div class="fastest-way-content">
+            <h2>Fastest way to <br> organize</h2>
+            <p>Most calendars are designed for teams. Slate is designed for freelancers</p>
+            <div class="cta-button">Try For Free</div>
+        </div>
+        <div class="macbook-mockup"></div>
+        <img src="assets/images/laptop.png">
+    </section>
+    
+ <!-- Lightning Fast Section -->
+<section class="lightning-fast">
+    <div class="newsletter-image">
+        <img src="assets/images/newsletter_vovu.png" alt="Newsletter Illustration">
+    </div>
+
+    <div class="newsletter-content">
+        <h3>At your fingertips</h3>
+        <h2>Lightning fast<br>prototyping</h2>
+        <h4>Subscribe to our Newsletter</h4>
+        <p>Available exclusively on Figmaland</p>
+
+        <form class="newsletter-form">
+            <input type="email" placeholder="Your Email">
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<!-- Partners Section -->
+<section class="partners">
+    <h2 class="section-title">Partners</h2>
+    <p class="section-subtitle" style="color: black;">
+        Most calendars are designed for teams. <br>
+        Slate is designed for freelancers
+    </p>
+
+    <div class="partner-logos">
+        <div class="partner-card">
+            <h6>Client Name</h6>
+            <a href="#"><img src="assets/logos/google.png" alt="Google"></a>
+        </div>
+        <div class="partner-card">
+            <h6>Client Name</h6>
+            <a href="#"><img src="assets/logos/amazon.png" alt="Amazon"></a>
+        </div>
+        <div class="partner-card">
+            <h6>Client Name</h6>
+            <a href="#"><img src="assets/logos/microsoft.png" alt="Microsoft"></a>
+        </div>
+        <div class="partner-card">
+            <h6>Client Name</h6>
+            <a href="#"><img src="assets/logos/uber.png" alt="Uber"></a>
+        </div>
+        <div class="partner-card">
+            <h6>Client Name</h6>
+            <a href="#"><img src="assets/logos/dropbox.png" alt="Dropbox"></a>
+        </div>
+        <div class="partner-card">
+            <h6>Client Name</h6>
+            <a href="#"><img src="assets/logos/google.png" alt="Google"></a>
+        </div>
+        <div class="partner-card">
+            <h6>Client Name</h6>
+            <a href="#"><img src="assets/logos/uber.png" alt="Uber"></a>
+        </div>
+        <div class="partner-card">
+            <h6>Client Name</h6>
+            <a href="#"><img src="assets/logos/amazon.png" alt="Amazon"></a>
+        </div>
+    </div>
+
+    <button class="cta-button">Try For Free</button>
+</section>
+
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <h2 class="section-title">Testimonials</h2><br>    
+    <div class="testimonial-slider"><div class="testimonial-slide active">
+            <div class="testimonial-content">
+            <img src="assets/logos/ibm.png" width="90" height="50"><br><br>
+                Most calendars are designed for teams. Slate is designed for freelancers who want a simple way to plan their schedule.
+            </div>
+            <div class="testimonial-author">
+                <img src="assets/images/john.png">
+                <div class="author-info">
+                    <h6>John Doe</h6>
+                    <p>UI Designer</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-slide">
+            <div class="testimonial-content">
+                <img src="assets/logos/apple.png" width="90" height="50"><br><br>
+                Slate has helped me manage my time so much better. It's incredibly user-friendly and efficient.
+            </div>
+            <div class="testimonial-author">
+                <img src="assets/images/jane.jpg">
+                <div class="author-info">
+                    <h6>Jane Smith</h6>
+                    <p>Product Manager</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-slide">
+            <div class="testimonial-content">
+                <img src="assets/logos/uber.png" width="90" height="50"><br><br>
+                The design is so clean and modern. I love using Slate every day to track my projects and deadlines.
+            </div>
+            <div class="testimonial-author">
+                <img src="assets/images/mark.jpg">
+                <div class="author-info">
+                    <h6>Mark Lee</h6>
+                    <p>Developer</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-dots">
+            <div class="dot active" data-slide="0"></div>
+            <div class="dot" data-slide="1"></div>
+            <div class="dot" data-slide="2"></div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <h2 class="section-title2"> Pricing </h2>
+        <p class="section-subtitle">Most calendars are designed for teams. Slate is designed for freelancers</p>
+        
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>FREE</h3>
+                <h6>Organize across all apps by hand</h6>
+                <div class="price">
+                    <span class="price-symbol">$</span>
+                    <span class="price-amount">0</span>
+                    <span class="price-period">Per Month</span>
+                </div>
+                <div class="pricing-features">
+                    <div class="pricing-feature">Pricing Feature</div>
+                    <div class="pricing-feature">Pricing Feature</div>
+                    <div class="pricing-feature">Pricing Feature</div>
+                    <div class="pricing-feature">Pricing Feature</div>
+                    <div class="pricing-feature">Pricing Feature</div>
+                </div>
+                <button class="pricing-button">Order Now</button>
+            </div>
+            
+            <div class="pricing-card primary">
+                <h3>STANDARD</h3>
+                <h6>Organize across all apps by hand</h6>
+                <div class="price">
+                    <span class="price-symbol">$</span>
+                    <span class="price-amount">10</span>
+                    <span class="price-period">Per Month</span>
+                </div>
+                <div class="pricing-features">
+                    <div class="pricing-feature">Pricing Feature</div>
+                    <div class="pricing-feature">Pricing Feature</div>
+                    <div class="pricing-feature">Pricing Feature</div>
+                    <div class="pricing-feature">Pricing Feature</div>
+                    <div class="pricing-feature">Pricing Feature</div>
+                </div>
+                <button class="pricing-button">Order Now</button>
+            </div>
+            
+            <div class="pricing-card">
+                <h3>BUSINESS</h3>
+                <h6>Organize across all apps by hand</h6>
+                <div class="price">
+                    <span class="price-symbol">$</span>
+                    <span class="price-amount">99</span>
+                    <span class="price-period">Per Month</span>
+                </div>
+                <div class="pricing-features">
+                    <div class="pricing-feature">Pricing Feature</div>
+                    <div class="pricing-feature">Pricing Feature</div>
+                    <div class="pricing-feature">Pricing Feature</div>
+                    <div class="pricing-feature">Pricing Feature</div>
+                    <div class="pricing-feature">Pricing Feature</div>
+                </div>
+                <button class="pricing-button">Order Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h1 class="section-title">Contact Us</h1>
+        <p class="section-subtitle" style="color: black;">
+        Most calendars are designed for teams. <br>Slate is designed for freelancers
+        </p>
+        
+        <div class="contact-row">
+            <div class="contact-form">
+                <h3>Contact Us</h3>
+                <input type="text" class="form-input" placeholder="Your Name">
+                <input type="email" class="form-input" placeholder="Your Email">
+                <textarea class="form-textarea" placeholder="Your Message"></textarea>
+                <button class="cta-button" id="send-button">Send</button>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon"></div>
+                    <img src="assets/icons/gps.png" alt="Location">
+                    <div class="contact-details">
+                        6386 Spring St undefined Anchorage, Georgia 12473 United States
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"></div>
+                    <img src="assets/icons/call.png" alt="Phone">
+                    <div class="contact-details">
+                        (843) 555-0130
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"></div>
+                    <img src="assets/icons/mail.png" alt="mail">
+                    <div class="contact-details">
+                        willie.jennings@example.com
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215256018454!2d-73.98811768459384!3d40.748440179327925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1627581877727!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                
+                <div class="social-media">
+                    <a href="#" class="social-icon"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
+                    <a href="#" class="social-icon"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+                    <a href="#" class="social-icon"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Pages</h3>
+                <a href="#">Home</a>
+                <a href="#">Features</a>
+                <a href="#">Partners</a>
+                <a href="#">Pricing</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-column">
+                <h3>Tomothy</h3>
+                <a href="#">Eleanor Edwards</a>
+                <a href="#">Ted Robertson</a>
+                <a href="#">Annette Russell</a>
+                <a href="#">Jennie Mckinney</a>
+                <a href="#">Gloria Richards</a>
+            </div>
+            <div class="footer-column">
+                <h3>Jane Black</h3>
+                <a href="#">Philip Jones</a>
+                <a href="#">Product</a>
+                <a href="#">Colleen Russell</a>
+                <a href="#">Marvin Hawkins</a>
+                <a href="#">Bruce Simmmons</a>
+            </div>
+            <div class="footer-contact">
+                <div class="contact-block">
+                    <a href="#"><img src="assets/icons/map.png" alt="map"></a>
+                    <span class="contact-text">7480 Mistwood Hollow</span>
+                </div>
+                <div class="contact-block">
+                    <a href="#"><img src="assets/icons/phone.png" alt="Call"></a>
+                    <span class="contact-text">(239) 555-0108</span>
+                </div>
+                <div class="footer-social">
+                <a href="#"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
+                <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Your query sent successfully</h3>
+            <p>We'll get back to you soon!</p>
+        </div>
+    </div>
+
+    <script>
+        // Video Play/Pause Functionality
+        const video = document.getElementById('demo-video');
+        const playButton = document.getElementById('play-button');
+
+        video.addEventListener('click', () => {
+            if (video.paused) {
+                video.play();
+                playButton.style.display = 'none';
+            } else {
+                video.pause();
+                playButton.style.display = 'flex';
+            }
+        });
+
+        video.addEventListener('play', () => {
+            playButton.style.display = 'none';
+        });
+
+        video.addEventListener('pause', () => {
+            playButton.style.display = 'flex';
+        });
+
+        playButton.addEventListener('click', () => {
+            video.play();
+            playButton.style.display = 'none';
+        });
+
+        // Testimonial Slider
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const dots = document.querySelectorAll('.dot');
+    let slideInterval;
+
+    function showSlide(n) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    function startSlider() {
+        slideInterval = setInterval(nextSlide, 5000); // 5 seconds
+    }
+
+    function resetInterval() {
+        clearInterval(slideInterval);
+        startSlider();
+    }
+
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            showSlide(parseInt(dot.getAttribute('data-slide')));
+            resetInterval();
+        });
+    });
+
+    // Start the slider initially
+    document.addEventListener('DOMContentLoaded', () => {
+        startSlider();
+    });
+
+        // Start the slider
+        startSlider();
+
+        // Contact Form Modal
+        const sendButton = document.getElementById('send-button');
+        const successModal = document.getElementById('successModal');
+        const closeModal = document.querySelector('.close-modal');
+
+        sendButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.body.classList.add('modal-open');
+            successModal.style.display = 'flex';
+        });
+
+        closeModal.addEventListener('click', () => {
+            document.body.classList.remove('modal-open');
+            successModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                document.body.classList.remove('modal-open');
+                successModal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
